@@ -8,63 +8,63 @@ The project provides a REST API of historical records of Formula 1 races, since 
 - Returns all drivers that have raced in F1: 
 
 ```
-http://{url}/drivers
+https://f1api-rask.herokuapp.com//drivers
 
 ```
 - This endpoint is to obtain a list of all drivers in a particular season (year)
 ```
-http://{url}/drivers/{seasonYear}
+https://f1api-rask.herokuapp.com//drivers/{seasonYear}
 
 ```
 - This endpoint is to obtain a list of all drivers in a particular race(round) of a season(year)
 
 ```
-http://{url}/drivers/{seasonYear}/{round}
+https://f1api-rask.herokuapp.com//drivers/{seasonYear}/{round}
 
 ```
 - Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driver_ref
 ```
-http://{url}/drivers/name/{driver_ref}
+https://f1api-rask.herokuapp.com//drivers/name/{driver_ref}
 ```
 
 - This endpoint is to obtain all drivers who have driven for a specific constructor at a particular circuit:
 ```
-http://{url}/drivers/constructor/mclaren/circuit/monza
+https://f1api-rask.herokuapp.com//drivers/constructor/mclaren/circuit/monza
 ```
 
 - This endpoint is to obtain all to list the drivers who have achieved a particular final position in the championship:
 ```
-http://{url}/drivers/position/{position}
+https://f1api-rask.herokuapp.com//drivers/position/{position}
 ```
 
 # Constructors EndPoints
 
 
-- Returns all teams that have already participated in F1: http://{url}/constructors;
+- Returns all teams that have already participated in F1: https://f1api-rask.herokuapp.com//constructors;
 
-- Returns all circuits that F1 has raced: http://{url}/circuits;
+- Returns all circuits that F1 has raced: https://f1api-rask.herokuapp.com//circuits;
 
-- Returns all F1 seasons: http://{url}/seasons;
+- Returns all F1 seasons: https://f1api-rask.herokuapp.com//seasons;
 
-- Returns data from all F1 steps: http://{url}/races;
+- Returns data from all F1 steps: https://f1api-rask.herokuapp.com//races;
 
-- Returns data for all F1 qualifications: http://{url}/qualifying;
+- Returns data for all F1 qualifications: https://f1api-rask.herokuapp.com//qualifying;
 
-- Returns all F1 Sprint race results: http://{url}/sprintResults;
+- Returns all F1 Sprint race results: https://f1api-rask.herokuapp.com//sprintResults;
 
-- Returns the final status of a pilot in a result: http://{url}/status;
+- Returns the final status of a pilot in a result: https://f1api-rask.herokuapp.com//status;
 
-- Returns the result of all F1 races: http://{url}/results;
+- Returns the result of all F1 races: https://f1api-rask.herokuapp.com//results;
 
-- Returns F1 pitstops data: http://{url}/pitStops;
+- Returns F1 pitstops data: https://f1api-rask.herokuapp.com//pitStops;
 
-- Returns the data of all laps already made in F1: http://{url}/laptimes;
+- Returns the data of all laps already made in F1: https://f1api-rask.herokuapp.com//laptimes;
 
-- Returns all drivers results in certain races: http://{url}/driverStandings;
+- Returns all drivers results in certain races: https://f1api-rask.herokuapp.com//driverStandings;
 
-- Returns all constructors results in certain races: http://{url}/constructorStandings;
+- Returns all constructors results in certain races: https://f1api-rask.herokuapp.com//constructorStandings;
 
-- Return all constructor results: http://{url}/constructorResults.
+- Return all constructor results: https://f1api-rask.herokuapp.com//constructorResults.
 
 
 _More endpoints will be accessible as development progresses._
