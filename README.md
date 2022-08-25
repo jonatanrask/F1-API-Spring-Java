@@ -1,12 +1,9 @@
 # API Formula 1
 
-## Description
+# Description
 The project provides a REST API of historical records of Formula 1 races, since the beginning of the world championships in 1950. For non-commercial purposes. Inspired by [ErgastApi.](https://ergast.com/mrd/)
-# Example of use
 
-- If the API is executed locally the "{url}" by default will be: "{url}/";
-
-## Drivers EndPoints
+# Drivers EndPoints
 
 - Returns all drivers that have raced in F1: 
 
@@ -25,9 +22,9 @@ http://{url}/drivers/{seasonYear}
 http://{url}/drivers/{seasonYear}/{round}
 
 ```
-- Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driverid
+- Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driver_ref
 ```
-http://{url}/drivers/id/{id}
+http://{url}/drivers/name/{driver_ref}
 ```
 
 - This endpoint is to obtain all drivers who have driven for a specific constructor at a particular circuit:
@@ -40,75 +37,35 @@ http://{url}/drivers/constructor/mclaren/circuit/monza
 http://{url}/drivers/position/{position}
 ```
 
-## Constructors EndPoints
+# Constructors EndPoints
 
-- Returns all teams that have already participated in F1:
-```
- http://{url}/constructors;
-```
-## Circuits EndPoints
 
-- Returns all circuits that F1 has raced:
-```
- http://{url}/circuits;
-```
-## Seasons EndPoints
+- Returns all teams that have already participated in F1: http://{url}/constructors;
 
-- Returns all F1 seasons:
-```
- http://{url}/seasons;
-```
-## Results EndPoints
+- Returns all circuits that F1 has raced: http://{url}/circuits;
 
-- Returns the result of all F1 races:
-```
- http://{url}/results;
-```
-- Returns all F1 Sprint race results:
-```
- http://{url}/sprintResults;
-```
-- Return all constructor results:
-```
- http://{url}/constructorResults.
-```
-## Qualifying EndPoints
+- Returns all F1 seasons: http://{url}/seasons;
 
-- Returns data for all F1 qualifications: 
-```
-http://{url}/qualifying;
-```
+- Returns data from all F1 steps: http://{url}/races;
 
-## Standings EndPoints
+- Returns data for all F1 qualifications: http://{url}/qualifying;
 
-- Returns all drivers results in certain races:
-```
- http://{url}/driverStandings;
-```
-- Returns all constructors results in certain races:
-```
- http://{url}/constructorStandings;
-```
+- Returns all F1 Sprint race results: http://{url}/sprintResults;
 
-## Finishing Status EndPoints
+- Returns the final status of a pilot in a result: http://{url}/status;
 
-- Returns the final status of a pilot in a result: 
-```
-http://{url}/status;
-```
+- Returns the result of all F1 races: http://{url}/results;
 
-## Lap Times EndPoints 
+- Returns F1 pitstops data: http://{url}/pitStops;
 
-- Returns the data of all laps already made in F1: 
-```
-http://{url}/laptimes;
-```
-## Pit Stops EndPoints
+- Returns the data of all laps already made in F1: http://{url}/laptimes;
 
-- Returns F1 pitstops data: 
-```
-http://{url}/pitStops;
-```
+- Returns all drivers results in certain races: http://{url}/driverStandings;
+
+- Returns all constructors results in certain races: http://{url}/constructorStandings;
+
+- Return all constructor results: http://{url}/constructorResults.
+
 
 _More endpoints will be accessible as development progresses._
 
