@@ -22,10 +22,9 @@ public class DriverController {
         return driverRepository.findAll();
 
     }
-    @GetMapping("/id/{id}")
-    public List<DriverDTO> findDriverByDriverId(@PathVariable(value = "idString") String idString){
-        int id = Integer.parseInt(idString);
-        return driverRepository.findDriverByDriverId(id);
+    @GetMapping("/name/{driverRef}")
+    public List<DriverDTO> findDriverByName(@PathVariable(value = "driverRef") String driverRef){
+        return driverRepository.findDriverByName(driverRef);
     }
     @GetMapping("/position/{positionString}")
     public List<DriverDTO> findByPosition(@PathVariable(value = "positionString") String positionString){

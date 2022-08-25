@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class DriverDTO {
     private Integer id;
-    private String surName;
+    private String driverRef;
     private Integer number;
     private String nationality;
     private LocalDate dob;
     private String url;
 
-    public DriverDTO(Integer id, String surName, Integer number, String nationality, LocalDate dob, String url) {
-        this.surName = surName;
+    public DriverDTO(Integer id, String driverRef, Integer number, String nationality, LocalDate dob, String url) {
+        this.driverRef = driverRef;
         this.number = number;
         this.nationality = nationality;
         this.dob = dob;
@@ -19,12 +19,12 @@ public class DriverDTO {
         this.id = id;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getDriverRef() {
+        return driverRef;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setDriverRef(String driverRef) {
+        this.driverRef = driverRef;
     }
 
     public Integer getNumber() {
