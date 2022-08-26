@@ -1,7 +1,7 @@
 # API Formula 1
 
 # Description
-The project provides a REST API of historical records of Formula 1 races, since the beginning of the world championships in 1950. For non-commercial purposes. Inspired by [ErgastApi.](https://ergast.com/mrd/)
+The project provides a REST API of historical records of Formula 1 races, since the beginning of the world championships in 1950. For non-commercial purposes. Inspired by [ErgastApi.](https://ergast.com/mrd/).
 
 # Drivers EndPoints
 
