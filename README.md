@@ -1,71 +1,126 @@
 # API Formula 1
 
 # Description
-The project provides a REST API of historical records of Formula 1 races, since the beginning of the world championships in 1950. For non-commercial purposes. Inspired by [ErgastApi.](https://ergast.com/mrd/).
+The project provides a REST API of historical records of Formula 1 races, since the beginning of the world championships in 1950. For non-commercial purposes. Inspired by [ErgastApi.](https://ergast.com/mrd/)
 
 # Drivers EndPoints
 
-- Returns all drivers that have raced in F1: 
+### - Returns all drivers that have raced in F1: 
 
 ```
 https://f1api-rask.herokuapp.com/drivers
 
 ```
-- This endpoint is to obtain a list of all drivers in a particular season (year)
+### - This endpoint is to obtain a list of all drivers in a particular season (year)
 ```
 https://f1api-rask.herokuapp.com/drivers/{seasonYear}
 
 ```
-- This endpoint is to obtain a list of all drivers in a particular race(round) of a season(year)
+### - This endpoint is to obtain a list of all drivers in a particular race(round) of a season(year)
 
 ```
 https://f1api-rask.herokuapp.com/drivers/{seasonYear}/{round}
 
 ```
-- Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driver_ref
+### - Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driver_ref
 ```
 https://f1api-rask.herokuapp.com/drivers/name/{driver_ref}
 ```
 
-- This endpoint is to obtain all drivers who have driven for a specific constructor at a particular circuit:
+### - This endpoint is to obtain all drivers who have driven for a specific constructor at a particular circuit:
 ```
 https://f1api-rask.herokuapp.com/drivers/constructor/mclaren/circuit/monza
 ```
 
-- This endpoint is to obtain all to list the drivers who have achieved a particular final position in the championship:
+### - This endpoint is to obtain all to list the drivers who have achieved a particular final position in the championship:
 ```
 https://f1api-rask.herokuapp.com/drivers/position/{position}
 ```
 
 # Constructors EndPoints
 
+- ### Returns all teams that have already participated in F1: 
+```
+https://f1api-rask.herokuapp.com/constructors
+```
+- ### List of all constructors within a year: 
+```
+https://f1api-rask.herokuapp.com/constructors/season/{year}
+```
+- ### List of all constructors within a race in a year: 
+```
+https://f1api-rask.herokuapp.com/constructors/season/{year}/round/{round}
+```
+- ### Constructor Information Each constructor listed in the response is identified by a unique constructorId which is used to identify the constructor throughout the API. To obtain information about a particular constructor append the constructorId (name of the constructor). This endpoint is to obtain the information of a particular constructor based on the constructorId (constructor name):
+```
+https://f1api-rask.herokuapp.com/constructors/name/{name}
+```
+- ### List all constructors a specific driver has driven for at a particular circuit: 
+```
+https://f1api-rask.herokuapp.com/constructors/drivers/{adriver}/circuits/{circuit}/
+```
+- ### List all the constructors who have achieved a particular final position in the championship: 
+```
+https://f1api-rask.herokuapp.com/constructors/position/{position}
+```
+# Circuits EndPoints
 
-- Returns all teams that have already participated in F1: https://f1api-rask.herokuapp.com/constructors;
+### - Returns all circuits that F1 has raced: 
+```
+https://f1api-rask.herokuapp.com/circuits
+```
 
-- Returns all circuits that F1 has raced: https://f1api-rask.herokuapp.com/circuits;
-
-- Returns all F1 seasons: https://f1api-rask.herokuapp.com/seasons;
-
-- Returns data from all F1 steps: https://f1api-rask.herokuapp.com/races;
-
-- Returns data for all F1 qualifications: https://f1api-rask.herokuapp.com/qualifying;
-
-- Returns all F1 Sprint race results: https://f1api-rask.herokuapp.com/sprintResults;
-
-- Returns the final status of a pilot in a result: https://f1api-rask.herokuapp.com/status;
-
-- Returns the result of all F1 races: https://f1api-rask.herokuapp.com/results;
-
-- Returns F1 pitstops data: https://f1api-rask.herokuapp.com/pitStops;
-
-- Returns the data of all laps already made in F1: https://f1api-rask.herokuapp.com/laptimes;
-
-- Returns all drivers results in certain races: https://f1api-rask.herokuapp.com/driverStandings;
-
-- Returns all constructors results in certain races: https://f1api-rask.herokuapp.com/constructorStandings;
-
-- Return all constructor results: https://f1api-rask.herokuapp.com/constructorResults.
-
+# Seasons EndPoints
+### - Returns all F1 seasons:
+``` 
+https://f1api-rask.herokuapp.com/seasons
+```
+# Results EndPoints
+### - Returns data from all F1 steps:
+``` 
+https://f1api-rask.herokuapp.com/races
+```
+### - Returns all F1 Sprint race results:
+``` 
+https://f1api-rask.herokuapp.com/sprintResults
+```
+### - Returns the result of all F1 races:
+``` 
+https://f1api-rask.herokuapp.com/results
+```
+### - Return all constructor results: 
+```
+https://f1api-rask.herokuapp.com/constructorResults.
+```
+# Qualifying EndPoints
+### - Returns data for all F1 qualifications:
+``` 
+https://f1api-rask.herokuapp.com/qualifying
+```
+# Standings EndPoints
+### - Returns all drivers results in certain races: 
+```
+https://f1api-rask.herokuapp.com/driverStandings
+```
+### - Returns all constructors results in certain races: 
+```
+https://f1api-rask.herokuapp.com/constructorStandings
+```
+# Lap Times EndPoints
+### - Returns the data of all laps already made in F1: 
+```
+https://f1api-rask.herokuapp.com/laptimes
+```
+# Pitstops EndPoints
+### - Returns F1 pitstops data: 
+```
+https://f1api-rask.herokuapp.com/pitStops
+```
+# Finishing EndPoints
+### - Returns the final status of a pilot in a result: 
+```
+https://f1api-rask.herokuapp.com/status
+```
 
 _More endpoints will be accessible as development progresses._
 
