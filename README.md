@@ -5,13 +5,13 @@ The project provides a REST API of historical records of Formula 1 races, since 
 
 # Drivers EndPoints
 
-### - Returns all drivers that have raced in F1: 
+### - List of all drivers: 
 
 ```
 https://f1api-rask.herokuapp.com/drivers
 
 ```
-### - This endpoint is to obtain a list of all drivers in a particular season (year)
+### - List of all drivers within a race in a year:
 ```
 https://f1api-rask.herokuapp.com/drivers/{seasonYear}
 
@@ -22,7 +22,7 @@ https://f1api-rask.herokuapp.com/drivers/{seasonYear}
 https://f1api-rask.herokuapp.com/drivers/{seasonYear}/{round}
 
 ```
-### - Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId This endpoint is to obtain the information of a particular driver based on the driver_ref
+### - Driver Information
 ```
 https://f1api-rask.herokuapp.com/drivers/name/{driver_ref}
 ```
@@ -51,7 +51,7 @@ https://f1api-rask.herokuapp.com/constructors/season/{year}
 ```
 https://f1api-rask.herokuapp.com/constructors/season/{year}/round/{round}
 ```
-- ### Constructor Information Each constructor listed in the response is identified by a unique constructorId which is used to identify the constructor throughout the API. To obtain information about a particular constructor append the constructorId (name of the constructor). This endpoint is to obtain the information of a particular constructor based on the constructorId (constructor name):
+- ### Constructor information:
 ```
 https://f1api-rask.herokuapp.com/constructors/name/{name}
 ```
@@ -68,6 +68,26 @@ https://f1api-rask.herokuapp.com/constructors/position/{position}
 ### - Returns all circuits that F1 has raced: 
 ```
 https://f1api-rask.herokuapp.com/circuits
+```
+
+### - List of all circuits within a year: 
+```
+https://f1api-rask.herokuapp.com/circuits/year/{year}
+```
+
+### - List of all circuits within a race in a year
+```
+https://f1api-rask.herokuapp.com/year/{year}/round/{round}
+```
+
+### - Circuit Information
+```
+https://f1api-rask.herokuapp.com/name/{circuitName}
+```
+ 
+ ### - List all circuits at which a specific driver has driven for a particular constructor:
+```
+https://f1api-rask.herokuapp.com/circuits/driver/{driver}/constructor/{constructor}
 ```
 
 # Seasons EndPoints
